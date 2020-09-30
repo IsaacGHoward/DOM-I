@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -41,9 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+//Fixing nav links
 let nav = document.querySelector("nav");
 let navLinks = nav.children;
 for(var i=0;i<navLinks.length;i++){
   navLinks[i].innerHTML = siteContent["nav"][`nav-item-${i}`];
 }
+
+//Fixing cta
+let cta = document.querySelector(".cta");
+cta.children[1].setAttribute('src', siteContent["cta"]["img-src"]);
+cta.children[0].children[0].innerHTML = siteContent["cta"]["h1"];
+cta.children[0].children[1].innerHTML = siteContent["cta"]["button"];
+console.log(cta);
