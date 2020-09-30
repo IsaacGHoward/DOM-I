@@ -53,4 +53,18 @@ let cta = document.querySelector(".cta");
 cta.children[1].setAttribute('src', siteContent["cta"]["img-src"]);
 cta.children[0].children[0].innerHTML = siteContent["cta"]["h1"];
 cta.children[0].children[1].innerHTML = siteContent["cta"]["button"];
-console.log(cta);
+
+//Fixing main-content
+let main_content = document.querySelector(".main-content");
+main_content.children[0].children[0].children[0].innerHTML = siteContent["main-content"]["features-h4"];
+main_content.children[0].children[0].children[1].innerHTML = siteContent["main-content"]["features-content"];
+main_content.children[0].children[1].children[0].innerHTML = siteContent["main-content"]["about-h4"];
+main_content.children[0].children[1].children[1].innerHTML = siteContent["main-content"]["about-content"];
+main_content.children[1].setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+main_content.children[2].children[0].children[0].innerHTML = siteContent["main-content"]["services-h4"];
+main_content.children[2].children[0].children[1].innerHTML = siteContent["main-content"]["services-content"];
+main_content.children[2].children[1].children[0].innerHTML = siteContent["main-content"]["product-h4"];
+main_content.children[2].children[1].children[1].innerHTML = siteContent["main-content"]["product-content"];
+main_content.children[2].children[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
+main_content.children[2].children[2].children[1].innerHTML = siteContent["main-content"]["vision-content"];
+console.log(main_content);
