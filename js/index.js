@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let nav = document.querySelector("nav");
 let navLinks = nav.children;
 for(var i=0;i<navLinks.length;i++){
-  navLinks[i].innerHTML = siteContent["nav"][`nav-item-${i}`];
+  navLinks[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`];
 }
 
 //Fixing cta
@@ -74,3 +74,7 @@ contact.children[0].innerHTML = siteContent["contact"]["contact-h4"];
 contact.children[1].innerHTML = siteContent["contact"]["address"];
 contact.children[2].innerHTML = siteContent["contact"]["phone"];
 contact.children[3].innerHTML = siteContent["contact"]["email"];
+
+//Fixing footer
+let footer = document.querySelector("footer");
+footer.children[0].innerHTML = siteContent["footer"]["copyright"];
