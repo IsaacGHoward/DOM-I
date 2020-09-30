@@ -67,4 +67,10 @@ main_content.children[2].children[1].children[0].innerHTML = siteContent["main-c
 main_content.children[2].children[1].children[1].innerHTML = siteContent["main-content"]["product-content"];
 main_content.children[2].children[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
 main_content.children[2].children[2].children[1].innerHTML = siteContent["main-content"]["vision-content"];
-console.log(main_content);
+
+//Fixing contact
+let contact = document.querySelector(".contact");
+contact.children[0].innerHTML = siteContent["contact"]["contact-h4"];
+contact.children[1].innerHTML = siteContent["contact"]["address"];
+contact.children[2].innerHTML = siteContent["contact"]["phone"];
+contact.children[3].innerHTML = siteContent["contact"]["email"];
