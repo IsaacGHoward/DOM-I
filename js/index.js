@@ -78,3 +78,23 @@ contact.children[3].innerHTML = siteContent["contact"]["email"];
 //Fixing footer
 let footer = document.querySelector("footer");
 footer.children[0].innerHTML = siteContent["footer"]["copyright"];
+
+//Adding new content
+for(var i=0;i<navLinks.length;i++){
+  navLinks[i].style.color = "green";
+}
+const newLink = document.createElement("a");
+newLink.href = "#";
+newLink.innerHTML = "Prepend Nav";
+const newLink2 = document.createElement("a");
+newLink2.href = "#";
+newLink2.innerHTML = "Append Nav";
+nav.prepend(newLink);
+nav.appendChild(newLink2);
+
+//Stretch 
+const button = cta.children[0].children[1];
+button.addEventListener('click', (event) => {
+  const body = document.querySelector("body");
+  body.style.backgroundColor = "#331919";
+});
